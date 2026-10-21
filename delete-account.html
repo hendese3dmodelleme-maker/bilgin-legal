@@ -1,9 +1,9 @@
 ﻿<!DOCTYPE html>
-<html lang="tr">
+<html lang="tr" id="htmlTag">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bilgin — Hesap ve Veri Silme Talebi (Account Deletion)</title>
+  <title id="pageTitle">Bilgin — Hesap ve Veri Silme Talebi (Account Deletion)</title>
   <style>
     :root {
       --bg: #091a18;
@@ -30,6 +30,29 @@
       border-radius: 20px;
       padding: 32px;
     }
+    .langs {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 20px;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 14px;
+    }
+    .lang-btn {
+      background: rgba(54, 226, 202, 0.1);
+      border: 1px solid var(--border);
+      color: var(--muted);
+      padding: 6px 14px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 13px;
+      font-weight: 600;
+      transition: all 0.2s;
+    }
+    .lang-btn:hover, .lang-btn.active {
+      background: var(--primary);
+      color: #091a18;
+      border-color: var(--primary);
+    }
     .badge {
       display: inline-block;
       background: rgba(239, 68, 68, 0.15);
@@ -51,7 +74,7 @@
       margin: 20px 0;
     }
     .box h2 { font-size: 16px; color: var(--primary); margin-bottom: 10px; }
-    ol, ul { padding-left: 20px; margin-bottom: 16px; }
+    ol, ul { padding-inline-start: 20px; margin-bottom: 16px; }
     li { margin-bottom: 8px; font-size: 14px; }
     .btn {
       display: inline-block;
@@ -62,15 +85,6 @@
       border-radius: 10px;
       text-decoration: none;
       margin-top: 8px;
-    }
-    .warning {
-      background: rgba(239, 68, 68, 0.08);
-      border: 1px solid rgba(239, 68, 68, 0.25);
-      border-radius: 12px;
-      padding: 16px;
-      margin: 20px 0;
-      font-size: 13px;
-      color: #fca5a5;
     }
     .footer {
       text-align: center;
@@ -84,40 +98,213 @@
 </head>
 <body>
   <div class="container">
-    <div class="badge">Google Play Politikası Gereği Bilgilendirme</div>
-    <h1>Bilgin — Hesap ve Veri Silme Rehberi</h1>
-    <p>Bilgin uygulamasında oluşturduğunuz hesabınızı ve hesabınıza bağlı tüm kişisel verilerinizi dilediğiniz zaman kalıcı olarak silebilirsiniz.</p>
+    <div class="langs">
+      <button class="lang-btn active" onclick="setLang('tr')">Türkçe</button>
+      <button class="lang-btn" onclick="setLang('en')">English</button>
+      <button class="lang-btn" onclick="setLang('ar')">العربية</button>
+      <button class="lang-btn" onclick="setLang('id')">Bahasa Indonesia</button>
+    </div>
+
+    <div class="badge" id="badgeText">Google Play Politikası Gereği Bilgilendirme</div>
+    <h1 id="mainTitle">Bilgin — Hesap ve Veri Silme Rehberi</h1>
+    <p id="mainDesc">Bilgin uygulamasında oluşturduğunuz hesabınızı ve hesabınıza bağlı tüm kişisel verilerinizi dilediğiniz zaman kalıcı olarak silebilirsiniz.</p>
 
     <div class="box">
-      <h2>1. Uygulama İçinden Anında Silme (Önerilen)</h2>
-      <ol>
+      <h2 id="step1Title">1. Uygulama İçinden Anında Silme (Önerilen)</h2>
+      <ol id="step1List">
         <li>Bilgin uygulamasını açın ve giriş yapın.</li>
         <li>Sağ alttaki <strong>Profil & Ayarlar</strong> sekmesine gidin.</li>
         <li>Sayfanın en altındaki kırmızı renkli <strong>"Hesabımı Sil"</strong> butonuna dokunun.</li>
         <li>Açılan onay penceresinde <strong>"Evet, Hesabımı Sil"</strong> diyerek onaylayın.</li>
       </ol>
-      <p class="muted">Bu işlem sonucunda hesabınız, oturum verileriniz ve geçmiş kayıtlarınız veritabanımızdan <strong>anında ve kalıcı olarak</strong> silinir.</p>
+      <p class="muted" id="step1Note">Bu işlem sonucunda hesabınız, oturum verileriniz ve geçmiş kayıtlarınız veritabanımızdan <strong>anında ve kalıcı olarak</strong> silinir.</p>
     </div>
 
     <div class="box">
-      <h2>2. Web Üzerinden Silme Talebi İletme</h2>
-      <p>Uygulamaya erişiminiz yoksa, kayıtlı Google e-posta adresinizden destek ekibimize bir e-posta göndererek hesabınızın silinmesini talep edebilirsiniz:</p>
-      <p><strong>Destek E-posta:</strong> <a style="color: var(--primary);" href="mailto:hendese3dmodelleme@gmail.com?subject=Bilgin%20Hesap%20Silme%20Talebi">hendese3dmodelleme@gmail.com</a></p>
-      <p class="muted">Talebiniz bize ulaştıktan sonra 48 saat içinde kimliğiniz doğrulanarak hesabınız ve tüm verileriniz kalıcı olarak imha edilir ve tarafınıza bilgilendirme yapılır.</p>
-      <a class="btn" href="mailto:hendese3dmodelleme@gmail.com?subject=Bilgin%20Hesap%20Silme%20Talebi">Silme Talebi E-postası Gönder</a>
+      <h2 id="step2Title">2. Web Üzerinden Silme Talebi İletme</h2>
+      <p id="step2Desc">Uygulamaya erişiminiz yoksa, kayıtlı Google e-posta adresinizden destek ekibimize bir e-posta göndererek hesabınızın silinmesini talep edebilirsiniz:</p>
+      <p><strong><span id="supportLabel">Destek E-posta:</span></strong> <a style="color: var(--primary);" href="mailto:hendese3dmodelleme@gmail.com?subject=Bilgin%20Hesap%20Silme%20Talebi">hendese3dmodelleme@gmail.com</a></p>
+      <p class="muted" id="step2Note">Talebiniz bize ulaştıktan sonra 48 saat içinde kimliğiniz doğrulanarak hesabınız ve tüm verileriniz kalıcı olarak imha edilir ve tarafınıza bilgilendirme yapılır.</p>
+      <a class="btn" id="emailBtn" href="mailto:hendese3dmodelleme@gmail.com?subject=Bilgin%20Hesap%20Silme%20Talebi">Silme Talebi E-postası Gönder</a>
     </div>
 
     <div class="box">
-      <h2>Silinen Veriler ve Saklama Politikası</h2>
-      <ul>
+      <h2 id="dataTitle">Silinen Veriler ve Saklama Politikası</h2>
+      <ul id="dataList">
         <li><strong>Tamamen Silinenler:</strong> Kullanıcı kimliği (UID), e-posta adresi, profil ayarları, günlük notları, favoriler, sohbet geçmişi ve bildirim kayıtları (FCM token).</li>
         <li><strong>Abonelik Uyarısı:</strong> Google Play üzerinden başlatılan aktif bir aboneliğiniz varsa, hesabınızı silmek aboneliğinizi otomatik olarak iptal etmez. Aboneliğinizi <em>Google Play Store &gt; Ödemeler ve Abonelikler</em> menüsünden ayrıca iptal etmeniz gerekir.</li>
       </ul>
     </div>
 
-    <div class="footer">
+    <div class="footer" id="footerText">
       Bilgin Uygulaması &copy; 2026 | <a style="color: var(--primary);" href="privacy-policy.html">Gizlilik Politikası</a> | <a style="color: var(--primary);" href="terms-and-conditions.html">Kullanım Koşulları</a>
     </div>
   </div>
+
+  <script>
+    const data = {
+      tr: {
+        dir: 'ltr',
+        pageTitle: 'Bilgin — Hesap ve Veri Silme Talebi (Account Deletion)',
+        badge: 'Google Play Politikası Gereği Bilgilendirme',
+        mainTitle: 'Bilgin — Hesap ve Veri Silme Rehberi',
+        mainDesc: 'Bilgin uygulamasında oluşturduğunuz hesabınızı ve hesabınıza bağlı tüm kişisel verilerinizi dilediğiniz zaman kalıcı olarak silebilirsiniz.',
+        step1Title: '1. Uygulama İçinden Anında Silme (Önerilen)',
+        step1List: [
+          'Bilgin uygulamasını açın ve giriş yapın.',
+          'Sağ alttaki <strong>Profil & Ayarlar</strong> sekmesine gidin.',
+          'Sayfanın en altındaki kırmızı renkli <strong>\"Hesabımı Sil\"</strong> butonuna dokunun.',
+          'Açılan onay penceresinde <strong>\"Evet, Hesabımı Sil\"</strong> diyerek onaylayın.'
+        ],
+        step1Note: 'Bu işlem sonucunda hesabınız, oturum verileriniz ve geçmiş kayıtlarınız veritabanımızdan <strong>anında ve kalıcı olarak</strong> silinir.',
+        step2Title: '2. Web Üzerinden Silme Talebi İletme',
+        step2Desc: 'Uygulamaya erişiminiz yoksa, kayıtlı Google e-posta adresinizden destek ekibimize bir e-posta göndererek hesabınızın silinmesini talep edebilirsiniz:',
+        supportLabel: 'Destek E-posta:',
+        step2Note: 'Talebiniz bize ulaştıktan sonra 48 saat içinde kimliğiniz doğrulanarak hesabınız ve tüm verileriniz kalıcı olarak imha edilir ve tarafınıza bilgilendirme yapılır.',
+        emailBtn: 'Silme Talebi E-postası Gönder',
+        emailSubject: 'Bilgin Hesap Silme Talebi',
+        dataTitle: 'Silinen Veriler ve Saklama Politikası',
+        dataList: [
+          '<strong>Tamamen Silinenler:</strong> Kullanıcı kimliği (UID), e-posta adresi, profil ayarları, günlük notları, favoriler, sohbet geçmişi ve bildirim kayıtları (FCM token).',
+          '<strong>Abonelik Uyarısı:</strong> Google Play üzerinden başlatılan aktif bir aboneliğiniz varsa, hesabınızı silmek aboneliğinizi otomatik olarak iptal etmez. Aboneliğinizi <em>Google Play Store &gt; Ödemeler ve Abonelikler</em> menüsünden ayrıca iptal etmeniz gerekir.'
+        ],
+        footerText: 'Bilgin Uygulaması &copy; 2026 | <a style=\"color: var(--primary);\" href=\"privacy-policy.html\">Gizlilik Politikası</a> | <a style=\"color: var(--primary);\" href=\"terms-and-conditions.html\">Kullanım Koşulları</a>'
+      },
+      en: {
+        dir: 'ltr',
+        pageTitle: 'Bilgin — Account & Data Deletion Request',
+        badge: 'Google Play Policy Disclosure',
+        mainTitle: 'Bilgin — Account and Data Deletion Guide',
+        mainDesc: 'You can permanently delete your Bilgin account and all associated personal data at any time.',
+        step1Title: '1. Instant In-App Deletion (Recommended)',
+        step1List: [
+          'Open the Bilgin app and sign in.',
+          'Navigate to the <strong>Profile & Settings</strong> tab in the bottom right.',
+          'Scroll down to the bottom and tap the red <strong>\"Delete Account\"</strong> button.',
+          'Confirm by clicking <strong>\"Yes, Delete My Account\"</strong> on the popup.'
+        ],
+        step1Note: 'All your account records, session details, and saved contents are <strong>immediately and permanently</strong> purged from our database.',
+        step2Title: '2. Submitting Deletion Request via Web / Email',
+        step2Desc: 'If you cannot access the app, you can request account deletion by emailing our support team from your registered Google email address:',
+        supportLabel: 'Support Email:',
+        step2Note: 'Upon receiving your request, your identity will be verified, your account and all data will be permanently wiped within 48 hours, and a confirmation email will be sent.',
+        emailBtn: 'Send Deletion Request Email',
+        emailSubject: 'Bilgin Account Deletion Request',
+        dataTitle: 'Data Deletion & Retention Policy',
+        dataList: [
+          '<strong>Permanently Erased Data:</strong> User ID (UID), email address, profile settings, journal entries, favorites, chat history, and push notification tokens (FCM).',
+          '<strong>Active Subscription Notice:</strong> If you have an active subscription via Google Play, deleting your account does NOT automatically cancel your Google Play billing. You must cancel active subscriptions via <em>Google Play Store &gt; Payments &amp; Subscriptions</em>.'
+        ],
+        footerText: 'Bilgin App &copy; 2026 | <a style=\"color: var(--primary);\" href=\"privacy-policy.html\">Privacy Policy</a> | <a style=\"color: var(--primary);\" href=\"terms-and-conditions.html\">Terms of Use</a>'
+      },
+      ar: {
+        dir: 'rtl',
+        pageTitle: 'بلقين — طلب حذف الحساب والبيانات (Account Deletion)',
+        badge: 'بيان متوافق مع سياسات Google Play',
+        mainTitle: 'بلقين — دليل حذف الحساب والبيانات الشخصية',
+        mainDesc: 'يمكنك حذف حسابك في تطبيق بلقين وكافة بياناتك الشخصية المرتبطة به نهائياً في أي وقت تشاء.',
+        step1Title: '١. الحذف الفوري من داخل التطبيق (موصى به)',
+        step1List: [
+          'افتح تطبيق بلقين وسجّل دخولك.',
+          'انتقل إلى قسم <strong>الملف الشخصي والإعدادات</strong> أسفل الشاشة.',
+          'انزل لأسفل الصفحة واضغط على زر <strong>\"حذف حسابي\"</strong> باللون الأحمر.',
+          'أكّد الحذف بالضغط على <strong>\"نعم، احذف حسابي\"</strong> في نافذة التأكيد.'
+        ],
+        step1Note: 'سيتم مسح حسابك وبيانات جلستك وكافة سجلاتك من قواعد بياناتنا <strong>فوراً ونهائياً</strong>.',
+        step2Title: '٢. تقديم طلب الحذف عبر الويب / البريد الإلكتروني',
+        step2Desc: 'في حال تعذر الوصول إلى التطبيق، يمكنك طلب حذف الحساب بإرسال رسالة من بريدك الإلكتروني المسجل لدينا إلى فريق الدعم:',
+        supportLabel: 'البريد الإلكتروني للدعم:',
+        step2Note: 'بمجرد استلام الطلب، سيتم التحقق من هويتك ومسح حسابك وكافة بياناتك نهائياً خلال ٤٨ ساعة وإشعارك بذلك.',
+        emailBtn: 'إرسال طلب الحذف عبر البريد',
+        emailSubject: 'طلب حذف حساب تطبيق بلقين',
+        dataTitle: 'البيانات المحذوفة وسياسة الاحتفاظ',
+        dataList: [
+          '<strong>البيانات التي تُمسح بالكامل:</strong> معرّف المستخدم (UID)، البريد الإلكتروني، إعدادات الملف، المذكرات، المفضلة، سجل المحادثات ورموز الإشعارات (FCM).',
+          '<strong>تنبيه الاشتراكات النشطة:</strong> حذف حسابك داخل التطبيق لا يُلغي اشتراكك في Google Play تلقائياً؛ يجب عليك إلغاء الاشتراك من <em>Google Play &gt; الدفعات والاشتراكات</em>.'
+        ],
+        footerText: 'تطبيق بلقين &copy; 2026 | <a style=\"color: var(--primary);\" href=\"privacy-policy.html\">سياسة الخصوصية</a> | <a style=\"color: var(--primary);\" href=\"terms-and-conditions.html\">شروط الاستخدام</a>'
+      },
+      id: {
+        dir: 'ltr',
+        pageTitle: 'Bilgin — Panduan & Permintaan Penghapusan Akun',
+        badge: 'Keterbukaan Kebijakan Google Play',
+        mainTitle: 'Bilgin — Panduan Penghapusan Akun dan Data',
+        mainDesc: 'Anda dapat menghapus akun Bilgin dan semua data pribadi yang terkait secara permanen kapan saja.',
+        step1Title: '1. Penghapusan Langsung dari Dalam Aplikasi (Disarankan)',
+        step1List: [
+          'Buka aplikasi Bilgin dan masuk ke akun Anda.',
+          'Buka tab <strong>Profil & Pengaturan</strong> di kanan bawah.',
+          'Gulir ke bawah dan ketuk tombol merah <strong>\"Hapus Akun Saya\"</strong>.',
+          'Konfirmasikan dengan memilih <strong>\"Ya, Hapus Akun Saya\"</strong> pada kotak dialog.'
+        ],
+        step1Note: 'Akun, data sesi, dan seluruh riwayat Anda akan dihapus dari server kami secara <strong>instan dan permanen</strong>.',
+        step2Title: '2. Permintaan Penghapusan melalui Web / Email',
+        step2Desc: 'Jika tidak dapat mengakses aplikasi, Anda dapat meminta penghapusan akun dengan mengirim email ke tim dukungan kami menggunakan akun Google terdaftar:',
+        supportLabel: 'Email Dukungan:',
+        step2Note: 'Setelah permintaan diterima, identitas Anda akan diverifikasi dan akun beserta seluruh data akan dihapus permanen dalam waktu 48 jam.',
+        emailBtn: 'Kirim Email Permintaan Hapus Akun',
+        emailSubject: 'Permintaan Hapus Akun Bilgin',
+        dataTitle: 'Data yang Dihapus & Kebijakan Penyimpanan',
+        dataList: [
+          '<strong>Data yang Dihapus Permanen:</strong> ID Pengguna (UID), alamat email, preferensi profil, catatan jurnal, favorit, riwayat obrolan, dan token notifikasi (FCM).',
+          '<strong>Peringatan Langganan Aktif:</strong> Menghapus akun aplikasi TIDAK otomatis membatalkan langganan Google Play aktif Anda. Anda harus membatalkan langganan melalui <em>Google Play Store &gt; Pembayaran &amp; Langganan</em>.'
+        ],
+        footerText: 'Aplikasi Bilgin &copy; 2026 | <a style=\"color: var(--primary);\" href=\"privacy-policy.html\">Kebijakan Privasi</a> | <a style=\"color: var(--primary);\" href=\"terms-and-conditions.html\">Ketentuan Penggunaan</a>'
+      }
+    };
+
+    function setLang(lang) {
+      const d = data[lang] || data['tr'];
+      document.getElementById('htmlTag').setAttribute('lang', lang);
+      document.getElementById('htmlTag').setAttribute('dir', d.dir);
+      document.getElementById('pageTitle').textContent = d.pageTitle;
+      document.getElementById('badgeText').textContent = d.badge;
+      document.getElementById('mainTitle').textContent = d.mainTitle;
+      document.getElementById('mainDesc').textContent = d.mainDesc;
+      document.getElementById('step1Title').textContent = d.step1Title;
+      document.getElementById('step1Note').innerHTML = d.step1Note;
+      document.getElementById('step2Title').textContent = d.step2Title;
+      document.getElementById('step2Desc').textContent = d.step2Desc;
+      document.getElementById('supportLabel').textContent = d.supportLabel;
+      document.getElementById('step2Note').textContent = d.step2Note;
+      document.getElementById('emailBtn').textContent = d.emailBtn;
+      document.getElementById('emailBtn').href = 'mailto:hendese3dmodelleme@gmail.com?subject=' + encodeURIComponent(d.emailSubject);
+      document.getElementById('dataTitle').textContent = d.dataTitle;
+      document.getElementById('footerText').innerHTML = d.footerText;
+
+      const step1Ol = document.getElementById('step1List');
+      step1Ol.innerHTML = '';
+      d.step1List.forEach(item => {
+        const li = document.createElement('li');
+        li.innerHTML = item;
+        step1Ol.appendChild(li);
+      });
+
+      const dataUl = document.getElementById('dataList');
+      dataUl.innerHTML = '';
+      d.dataList.forEach(item => {
+        const li = document.createElement('li');
+        li.innerHTML = item;
+        dataUl.appendChild(li);
+      });
+
+      document.querySelectorAll('.lang-btn').forEach(btn => {
+        btn.classList.remove('active');
+        if (btn.getAttribute('onclick').includes(lang)) {
+          btn.classList.add('active');
+        }
+      });
+    }
+
+    // Auto-detect browser language or query param ?lang=xx
+    const urlParams = new URLSearchParams(window.location.search);
+    const qLang = urlParams.get('lang');
+    if (qLang && data[qLang]) {
+      setLang(qLang);
+    } else {
+      const userLang = (navigator.language || navigator.userLanguage || 'tr').slice(0, 2);
+      setLang(data[userLang] ? userLang : 'tr');
+    }
+  </script>
 </body>
 </html>
