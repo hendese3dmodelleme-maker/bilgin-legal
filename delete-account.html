@@ -1,0 +1,123 @@
+﻿<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bilgin — Hesap ve Veri Silme Talebi (Account Deletion)</title>
+  <style>
+    :root {
+      --bg: #091a18;
+      --card: #0f2b26;
+      --primary: #36e2ca;
+      --text: #e2f1ef;
+      --muted: #8bb7ae;
+      --border: #1a453d;
+      --danger: #ef4444;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      padding: 32px 16px;
+    }
+    .container {
+      max-width: 680px;
+      margin: 0 auto;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 32px;
+    }
+    .badge {
+      display: inline-block;
+      background: rgba(239, 68, 68, 0.15);
+      color: #f87171;
+      padding: 6px 14px;
+      border-radius: 30px;
+      font-size: 13px;
+      font-weight: 600;
+      margin-bottom: 16px;
+    }
+    h1 { font-size: 24px; color: #fff; margin-bottom: 12px; }
+    p { margin-bottom: 16px; font-size: 15px; color: var(--text); }
+    .muted { color: var(--muted); font-size: 14px; }
+    .box {
+      background: rgba(54, 226, 202, 0.05);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 20px;
+      margin: 20px 0;
+    }
+    .box h2 { font-size: 16px; color: var(--primary); margin-bottom: 10px; }
+    ol, ul { padding-left: 20px; margin-bottom: 16px; }
+    li { margin-bottom: 8px; font-size: 14px; }
+    .btn {
+      display: inline-block;
+      background: var(--primary);
+      color: #091a18;
+      font-weight: 700;
+      padding: 12px 24px;
+      border-radius: 10px;
+      text-decoration: none;
+      margin-top: 8px;
+    }
+    .warning {
+      background: rgba(239, 68, 68, 0.08);
+      border: 1px solid rgba(239, 68, 68, 0.25);
+      border-radius: 12px;
+      padding: 16px;
+      margin: 20px 0;
+      font-size: 13px;
+      color: #fca5a5;
+    }
+    .footer {
+      text-align: center;
+      margin-top: 24px;
+      font-size: 12px;
+      color: var(--muted);
+      border-top: 1px solid var(--border);
+      padding-top: 16px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="badge">Google Play Politikası Gereği Bilgilendirme</div>
+    <h1>Bilgin — Hesap ve Veri Silme Rehberi</h1>
+    <p>Bilgin uygulamasında oluşturduğunuz hesabınızı ve hesabınıza bağlı tüm kişisel verilerinizi dilediğiniz zaman kalıcı olarak silebilirsiniz.</p>
+
+    <div class="box">
+      <h2>1. Uygulama İçinden Anında Silme (Önerilen)</h2>
+      <ol>
+        <li>Bilgin uygulamasını açın ve giriş yapın.</li>
+        <li>Sağ alttaki <strong>Profil & Ayarlar</strong> sekmesine gidin.</li>
+        <li>Sayfanın en altındaki kırmızı renkli <strong>"Hesabımı Sil"</strong> butonuna dokunun.</li>
+        <li>Açılan onay penceresinde <strong>"Evet, Hesabımı Sil"</strong> diyerek onaylayın.</li>
+      </ol>
+      <p class="muted">Bu işlem sonucunda hesabınız, oturum verileriniz ve geçmiş kayıtlarınız veritabanımızdan <strong>anında ve kalıcı olarak</strong> silinir.</p>
+    </div>
+
+    <div class="box">
+      <h2>2. Web Üzerinden Silme Talebi İletme</h2>
+      <p>Uygulamaya erişiminiz yoksa, kayıtlı Google e-posta adresinizden destek ekibimize bir e-posta göndererek hesabınızın silinmesini talep edebilirsiniz:</p>
+      <p><strong>Destek E-posta:</strong> <a style="color: var(--primary);" href="mailto:hendese3dmodelleme@gmail.com?subject=Bilgin%20Hesap%20Silme%20Talebi">hendese3dmodelleme@gmail.com</a></p>
+      <p class="muted">Talebiniz bize ulaştıktan sonra 48 saat içinde kimliğiniz doğrulanarak hesabınız ve tüm verileriniz kalıcı olarak imha edilir ve tarafınıza bilgilendirme yapılır.</p>
+      <a class="btn" href="mailto:hendese3dmodelleme@gmail.com?subject=Bilgin%20Hesap%20Silme%20Talebi">Silme Talebi E-postası Gönder</a>
+    </div>
+
+    <div class="box">
+      <h2>Silinen Veriler ve Saklama Politikası</h2>
+      <ul>
+        <li><strong>Tamamen Silinenler:</strong> Kullanıcı kimliği (UID), e-posta adresi, profil ayarları, günlük notları, favoriler, sohbet geçmişi ve bildirim kayıtları (FCM token).</li>
+        <li><strong>Abonelik Uyarısı:</strong> Google Play üzerinden başlatılan aktif bir aboneliğiniz varsa, hesabınızı silmek aboneliğinizi otomatik olarak iptal etmez. Aboneliğinizi <em>Google Play Store &gt; Ödemeler ve Abonelikler</em> menüsünden ayrıca iptal etmeniz gerekir.</li>
+      </ul>
+    </div>
+
+    <div class="footer">
+      Bilgin Uygulaması &copy; 2026 | <a style="color: var(--primary);" href="privacy-policy.html">Gizlilik Politikası</a> | <a style="color: var(--primary);" href="terms-and-conditions.html">Kullanım Koşulları</a>
+    </div>
+  </div>
+</body>
+</html>
