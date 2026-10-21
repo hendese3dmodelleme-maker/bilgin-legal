@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="tr" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bilgin — Kullanım Koşulları (EULA)</title>
+  <style>
+    :root {
+      --bg: #091a18;
+      --card: #0f2b26;
+      --primary: #36e2ca;
+      --text: #e2f1ef;
+      --muted: #8bb7ae;
+      --border: #1a453d;
+      --gold: #e8c96a;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      padding: 24px 16px;
+    }
+    .container {
+      max-width: 780px;
+      margin: 0 auto;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 32px 24px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    }
+    .lang-bar {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 24px;
+      flex-wrap: wrap;
+      padding-bottom: 16px;
+      border-bottom: 1px solid var(--border);
+    }
+    .lang-btn {
+      background: rgba(54, 226, 202, 0.08);
+      color: var(--text);
+      border: 1px solid var(--border);
+      padding: 6px 14px;
+      border-radius: 20px;
+      cursor: pointer;
+      font-size: 13px;
+      font-weight: 600;
+      transition: all 0.2s;
+    }
+    .lang-btn:hover {
+      background: rgba(54, 226, 202, 0.2);
+      border-color: var(--primary);
+    }
+    .lang-btn.active {
+      background: var(--primary);
+      color: #091a18;
+      border-color: var(--primary);
+    }
+    .badge {
+      display: inline-block;
+      background: rgba(54, 226, 202, 0.15);
+      color: var(--primary);
+      padding: 6px 14px;
+      border-radius: 30px;
+      font-size: 13px;
+      font-weight: 700;
+      margin-bottom: 16px;
+    }
+    h1 {
+      font-size: 26px;
+      color: #fff;
+      margin-bottom: 12px;
+      line-height: 1.3;
+    }
+    .subtitle {
+      color: var(--muted);
+      font-size: 14px;
+      margin-bottom: 24px;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 16px;
+    }
+    .banner {
+      background: rgba(54, 226, 202, 0.08);
+      border: 1px solid rgba(54, 226, 202, 0.25);
+      border-radius: 14px;
+      padding: 16px;
+      margin-bottom: 28px;
+      font-size: 14px;
+      color: #fff;
+    }
+    .warning-box {
+      background: rgba(232, 201, 106, 0.08);
+      border: 1px solid rgba(232, 201, 106, 0.3);
+      border-radius: 14px;
+      padding: 16px;
+      margin-bottom: 28px;
+      font-size: 13.5px;
+      color: var(--gold);
+      line-height: 1.6;
+    }
+    h2 {
+      font-size: 18px;
+      color: var(--primary);
+      margin: 24px 0 10px;
+    }
+    ul {
+      padding-inline-start: 22px;
+      font-size: 14px;
+      margin-bottom: 14px;
+    }
+    li {
+      margin-bottom: 8px;
+    }
+    .contact {
+      margin-top: 32px;
+      padding: 20px;
+      background: rgba(232, 201, 106, 0.08);
+      border: 1px solid rgba(232, 201, 106, 0.25);
+      border-radius: 14px;
+      font-size: 14px;
+    }
+    .contact h3 {
+      color: var(--gold);
+      font-size: 16px;
+      margin-bottom: 8px;
+    }
+    .contact a {
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .footer {
+      margin-top: 32px;
+      text-align: center;
+      font-size: 12px;
+      color: var(--muted);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="lang-bar">
+      <button class="lang-btn" onclick="selectLang('tr')">🇹🇷 Türkçe</button>
+      <button class="lang-btn" onclick="selectLang('en')">🇬🇧 English</button>
+      <button class="lang-btn" onclick="selectLang('ar')">🇸🇦 العربية</button>
+      <button class="lang-btn" onclick="selectLang('id')">🇮🇩 Bahasa Indonesia</button>
+    </div>
+
+    <div id="content-area">
+      <!-- Injected by JavaScript or SSR fallback -->
+    </div>
+  </div>
+
+  <script id="data-docs" type="application/json">
+{"tr":{"lang":"tr","dir":"ltr","title":"Bilgin — Kullanım Koşulları ve Son Kullanıcı Lisans Sözleşmesi (EULA)","badge":"⚖️ Yasal Standartlar & Lisans","updated":"Son güncelleme: 20 Ekim 2026 | Sürüm 1.0.0","banner":"<strong>Önemli Bilgilendirme:</strong> Bilgin uygulamasını indirerek, kurarak veya kullanarak aşağıdaki Son Kullanıcı Lisans Sözleşmesi (EULA) ve Kullanım Koşullarını kabul etmiş sayılırsınız.","warning":"<strong>⚠️ Tıbbi ve Pediatrik Teşhis Reddi:</strong> Bilgin uygulamasında sunulan yapay zekâ analizleri, mizaç değerlendirmeleri ve ebeveynlik önerileri yalnızca bilgilendirme, istişare ve farkındalık amaçlıdır. Hiçbir surette lisanslı bir çocuk psikiyatristi, pedagog, hekim veya klinik uzmanın resmi teşhis veya tedavisi yerine geçmez. Acil sağlık veya psikolojik durumlarda uzman bir sağlık kuruluşuna başvurunuz.","sections":[{"h":"1. Hizmetin Tanımı ve Kapsamı","items":["Bilgin; ebeveynlerin çocuk yetiştirme süreçlerinde rehberlik alabilecekleri, mizaç analizi, yapay zekâ destekli soru-cevap, günlük farkındalık adımları, Nebevi terbiye ilkeleri ve çocuk hikâyeleri sunan dijital bir ebeveyn asistanıdır."]},{"h":"2. Abonelik, Ücretlendirme ve Otomatik Yenileme","items":["<strong>Satın Alma & Faturalama:</strong> Tüm uygulama içi abonelik işlemleri Google Play Store üzerinden gerçekleştirilir ve mağaza hesabınıza yansıtılır.","<strong>Otomatik Yenileme:</strong> Abonelikler, mevcut faturalama döneminin bitiminden en az 24 saat önce iptal edilmediği takdirde seçilen periyot (aylık/yıllık) üzerinden otomatik olarak yenilenir.","<strong>Abonelik Yönetimi & İptal:</strong> Aboneliğinizi dilediğiniz an Google Play Store → Abonelikler menüsünden iptal edebilirsiniz. Uygulamayı veya hesabınızı silmek aktif mağaza aboneliğini otomatik olarak durdurmaz.","<strong>İade Politikası:</strong> İade talepleri doğrudan Google Play iade politikaları kapsamında değerlendirilir."]},{"h":"3. Lisans ve Fikri Mülkiyet Hakları","items":["Uygulamadaki tüm yazılım kodları, arayüz tasarımları, metinler, makaleler, kıssa derlemeleri ve grafikler Bilgin geliştirici ekibine aittir ve telif hakları mevzuatı ile korunmaktadır. Kullanıcıya yalnızca kişisel ve ticari olmayan kullanım için geri alınabilir, devredilemez bir kullanım lisansı verilmektedir."]},{"h":"4. Kullanıcı Sorumlulukları ve Kabul Edilebilir Kullanım","items":["Yapay zekâ danışmanına hukuka, ahlaka aykırı, nefret söylemi, şiddet veya kötüye kullanım içeren istemler gönderilemez.","Sistemin işleyişine müdahale etme, tersine mühendislik yapma veya otomatik veri çekme girişimleri lisans ihlalidir ve hesabın askıya alınmasına sebep olur."]},{"h":"5. Hesap Feshi ve Veri Silme","items":["Kullanıcı dilediği an uygulama içindeki <strong>Profil → Hesabımı Sil</strong> seçeneğini kullanarak hesabını ve ilişkili sunucu/cihaz verilerini silebilir."]}],"contactTitle":"📬 İletişim ve Hukuki Sorular","contactText":"Kullanım koşulları veya sözleşmeye dair sorularınız için:","footer":"© 2026 Bilgin — Tüm hakları saklıdır."},"en":{"lang":"en","dir":"ltr","title":"Bilgin — Terms of Use & End User License Agreement (EULA)","badge":"⚖️ Legal Standards & License","updated":"Last updated: October 20, 2026 | Version 1.0.0","banner":"<strong>Important Notice:</strong> By downloading, installing, or using the Bilgin app, you agree to be bound by this End User License Agreement (EULA) and Terms of Use.","warning":"<strong>⚠️ Medical & Pediatric Disclaimer:</strong> AI analyses, temperament assessments, and parenting suggestions provided in Bilgin are for informational and educational purposes only. They do not substitute for professional diagnosis, advice, or treatment by a licensed physician, child psychiatrist, or psychologist. In any medical or psychological emergency, seek professional care immediately.","sections":[{"h":"1. Scope of Service","items":["Bilgin is a digital parenting assistant offering temperament insights, AI-assisted Q&A, daily mindfulness steps, Prophetic parenting principles, and children's stories."]},{"h":"2. Subscriptions, Billing & Auto-Renewal","items":["<strong>Purchase & Billing:</strong> All in-app subscriptions are processed through Google Play Store and charged to your store account.","<strong>Auto-Renewal:</strong> Subscriptions automatically renew for the selected period (monthly/annual) unless canceled at least 24 hours before the end of the current billing cycle.","<strong>Management & Cancellation:</strong> You can cancel anytime via Google Play Store → Subscriptions. Uninstalling the app or deleting your account does not automatically cancel an active store subscription.","<strong>Refunds:</strong> Refund requests are governed directly by Google Play refund policies."]},{"h":"3. License & Intellectual Property","items":["All software code, UI designs, texts, articles, story compilations, and graphics belong to the Bilgin team and are protected by copyright laws. You are granted a revocable, non-transferable, non-exclusive license for personal, non-commercial use only."]},{"h":"4. Acceptable Use","items":["You may not submit unlawful, abusive, violent, or harmful prompts to the AI assistant.","Attempting to interfere with service operations, reverse engineer, or scrape data violates this license and may result in account suspension."]},{"h":"5. Account Termination & Data Deletion","items":["You may permanently delete your account and associated server/device data at any time via <strong>Profile → Delete My Account</strong>."]}],"contactTitle":"📬 Contact & Legal Inquiries","contactText":"For questions regarding these terms:","footer":"© 2026 Bilgin — All rights reserved."},"ar":{"lang":"ar","dir":"rtl","title":"بِلغين — شروط الاستخدام واتفاقية ترخيص المستخدم النهائي (EULA)","badge":"⚖️ المعايير القانونية والترخيص","updated":"آخر تحديث: ٢٠ أكتوبر ٢٠٢٦ | الإصدار ١٫٠٫٠","banner":"<strong>إشعار هام:</strong> بتحميل تطبيق بِلغين أو تثبيته أو استخدامه، فإنك توافق على الالتزام بشروط الاستخدام واتفاقية ترخيص المستخدم النهائي هذه.","warning":"<strong>⚠️ إخلاء المسؤولية الطبية والتربوية:</strong> التحليلات والتقييمات والنصائح المقدمة في تطبيق بِلغين هي لأغراض التوعية والإرشاد فقط، ولا تغني بأي حال عن التشخيص أو العلاج الطبي أو النفسي المتخصص. في الحالات الطارئة، يرجى مراجعة المختصين فوراً.","sections":[{"h":"١. نطاق الخدمة","items":["بِلغين هو مساعد رقمي للوالدين يقدم تحليلات الطباع، واستشارات مدعومة بالذكاء الاصطناعي، وخطوات وعي يومية، ومبادئ التربية النبوية، وقصصاً هادفة للأطفال."]},{"h":"٢. الاشتراكات والفوترة والتجديد التلقائي","items":["<strong>الشراء والفوترة:</strong> تتم جميع معاملات الاشتراك عبر متجر Google Play وتُقيَّد على حساب المتجر الخاص بك.","<strong>التجديد التلقائي:</strong> تتجدد الاشتراكات تلقائياً للفترة المختارة (شهرياً/سنوياً) ما لم يتم إلغاؤها قبل ٢٤ ساعة على الأقل من انتهاء الفترة الحالية.","<strong>إدارة الاشتراك والإلغاء:</strong> يمكنك إلغاء اشتراكك في أي وقت من متجر Google Play ← الاشتراكات. حذف التطبيق أو حذف الحساب لا يلغي الاشتراك الفعال في المتجر تلقائياً.","<strong>سياسة الاسترداد:</strong> تخضع طلبات استرداد الأموال لسياسات متجر Google Play."]},{"h":"٣. الترخيص وحقوق الملكية الفكرية","items":["جميع الأكواد البرمجية والتصاميم والنصوص والمقالات والقصص محمية بحقوق النشر وتعود لفريق بِلغين. يُمنح المستخدم ترخيصاً شخصياً غير حصري وغير قابل للنقل للاستخدام غير التجاري فقط."]},{"h":"٤. الاستخدام المقبول","items":["يُحظر إرسال محتوى غير قانوني أو مسيء أو يحض على العنف إلى المساعد الذكي.","محاولة الهندسة العكسية أو تعطيل النظام أو سحب البيانات آلياً تعد انتهاكاً للترخيص وتؤدي إلى إيقاف الحساب."]},{"h":"٥. إنهاء الحساب وحذف البيانات","items":["يمكن للمستخدم حذف حسابه وبياناته في أي وقت عبر خيار <strong>الملف الشخصي ← حذف حسابي</strong> داخل التطبيق."]}],"contactTitle":"📬 التواصل والاستفسارات القانونية","contactText":"لأي استفسار حول شروط الاستخدام:","footer":"© ٢٠٢٦ بِلغين — جميع الحقوق محفوظة."},"id":{"lang":"id","dir":"ltr","title":"Bilgin — Ketentuan Penggunaan & Perjanjian Lisensi Pengguna Akhir (EULA)","badge":"⚖️ Standar Hukum & Lisensi","updated":"Terakhir diperbarui: 20 Oktober 2026 | Versi 1.0.0","banner":"<strong>Pemberitahuan Penting:</strong> Dengan mengunduh, memasang, atau menggunakan aplikasi Bilgin, Anda menyetujui Perjanjian Lisensi Pengguna Akhir (EULA) dan Ketentuan Penggunaan ini.","warning":"<strong>⚠️ Penafian Medis & Pediatrik:</strong> Analisis AI, penilaian temperamen, dan saran pengasuhan di Bilgin hanya untuk tujuan informasi dan edukasi. Layanan ini tidak menggantikan diagnosis, saran, atau perawatan medis/psikologis profesional. Dalam keadaan darurat, segera hubungi tenaga medis profesional.","sections":[{"h":"1. Cakupan Layanan","items":["Bilgin adalah asisten pengasuhan digital yang menyediakan analisis temperamen, tanya-jawab berbantuan AI, langkah kesadaran harian, prinsip pengasuhan Nabawi, dan kisah anak."]},{"h":"2. Langganan, Penagihan & Perpanjangan Otomatis","items":["<strong>Pembelian & Penagihan:</strong> Semua langganan dalam aplikasi diproses melalui Google Play Store.","<strong>Perpanjangan Otomatis:</strong> Langganan diperpanjang secara otomatis sesuai periode yang dipilih (bulanan/tahunan) kecuali dibatalkan setidaknya 24 jam sebelum akhir periode berjalan.","<strong>Pengelolaan & Pembatalan:</strong> Anda dapat membatalkan kapan saja melalui Google Play Store → Langganan. Menghapus aplikasi atau akun tidak otomatis membatalkan langganan toko yang aktif.","<strong>Kebijakan Pengembalian Dana:</strong> Permintaan pengembalian dana diatur oleh kebijakan Google Play."]},{"h":"3. Lisensi & Hak Kekayaan Intelektual","items":["Seluruh kode perangkat lunak, desain antarmuka, teks, artikel, kompilasi kisah, dan grafik adalah milik tim Bilgin dan dilindungi undang-undang hak cipta. Anda diberikan lisensi terbatas, dapat dibatalkan, dan tidak dapat dipindahtangankan untuk penggunaan pribadi dan non-komersial."]},{"h":"4. Penggunaan yang Dapat Diterima","items":["Dilarang mengirimkan perintah yang melanggar hukum, kasar, atau berbahaya kepada asisten AI.","Upaya mengganggu sistem, melakukan rekayasa balik, atau mengambil data secara otomatis melanggar lisensi ini dan dapat menyebabkan penangguhan akun."]},{"h":"5. Penghentian Akun & Penghapusan Data","items":["Anda dapat menghapus akun dan data terkait kapan saja melalui menu <strong>Profil → Hapus Akun Saya</strong> di dalam aplikasi."]}],"contactTitle":"📬 Kontak & Pertanyaan Hukum","contactText":"Untuk pertanyaan mengenai ketentuan ini:","footer":"© 2026 Bilgin — Hak cipta dilindungi."}}
+  </script>
+
+  <script>
+    const allDocs = JSON.parse(document.getElementById('data-docs').textContent);
+
+    function selectLang(code) {
+      const doc = allDocs[code] || allDocs['tr'];
+      if (!doc) return;
+
+      document.documentElement.lang = doc.lang;
+      document.documentElement.dir = doc.dir || 'ltr';
+
+      // Update URL query parameter without full reload
+      if (window.history && window.history.replaceState) {
+        const url = new URL(window.location);
+        url.searchParams.set('lang', code);
+        window.history.replaceState({}, '', url);
+      }
+
+      // Update button active state
+      document.querySelectorAll('.lang-btn').forEach(btn => {
+        if (btn.getAttribute('onclick').includes("'" + code + "'")) {
+          btn.classList.add('active');
+        } else {
+          btn.classList.remove('active');
+        }
+      });
+
+      // Render content
+      let sectionsHtml = '';
+      if (doc.sections) {
+        sectionsHtml = doc.sections.map(s => {
+          const items = s.items.map(i => '<li>' + i + '</li>').join('');
+          return '<h2>' + s.h + '</h2><ul>' + items + '</ul>';
+        }).join('');
+      }
+
+      let warningHtml = '';
+      if (doc.warning) {
+        warningHtml = '<div class="warning-box">' + doc.warning + '</div>';
+      }
+
+      const html = 
+        '<div class="badge">' + doc.badge + '</div>' +
+        '<h1>' + doc.title + '</h1>' +
+        '<div class="subtitle">' + doc.updated + '</div>' +
+        '<div class="banner">' + doc.banner + '</div>' +
+        warningHtml +
+        sectionsHtml +
+        '<div class="contact">' +
+          '<h3>' + (doc.contactTitle || '📬 İletişim') + '</h3>' +
+          '<p>' + (doc.contactText || '') + '</p>' +
+          '<p><a href="mailto:hendese3dmodelleme@gmail.com">hendese3dmodelleme@gmail.com</a></p>' +
+        '</div>' +
+        '<div class="footer">' + (doc.footer || '') + '</div>';
+
+      document.getElementById('content-area').innerHTML = html;
+    }
+
+    // Determine initial language from ?lang= or navigator.language
+    const urlParams = new URLSearchParams(window.location.search);
+    let initialLang = (urlParams.get('lang') || '').toLowerCase().slice(0, 2);
+    if (!allDocs[initialLang]) {
+      const navLang = (navigator.language || 'tr').toLowerCase().slice(0, 2);
+      initialLang = allDocs[navLang] ? navLang : 'tr';
+    }
+
+    selectLang(initialLang);
+  </script>
+</body>
+</html>

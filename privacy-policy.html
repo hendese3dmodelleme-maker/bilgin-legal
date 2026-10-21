@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="tr" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bilgin — Gizlilik Politikası</title>
+  <style>
+    :root {
+      --bg: #091a18;
+      --card: #0f2b26;
+      --primary: #36e2ca;
+      --text: #e2f1ef;
+      --muted: #8bb7ae;
+      --border: #1a453d;
+      --gold: #e8c96a;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      padding: 24px 16px;
+    }
+    .container {
+      max-width: 780px;
+      margin: 0 auto;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 32px 24px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    }
+    .lang-bar {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 24px;
+      flex-wrap: wrap;
+      padding-bottom: 16px;
+      border-bottom: 1px solid var(--border);
+    }
+    .lang-btn {
+      background: rgba(54, 226, 202, 0.08);
+      color: var(--text);
+      border: 1px solid var(--border);
+      padding: 6px 14px;
+      border-radius: 20px;
+      cursor: pointer;
+      font-size: 13px;
+      font-weight: 600;
+      transition: all 0.2s;
+    }
+    .lang-btn:hover {
+      background: rgba(54, 226, 202, 0.2);
+      border-color: var(--primary);
+    }
+    .lang-btn.active {
+      background: var(--primary);
+      color: #091a18;
+      border-color: var(--primary);
+    }
+    .badge {
+      display: inline-block;
+      background: rgba(54, 226, 202, 0.15);
+      color: var(--primary);
+      padding: 6px 14px;
+      border-radius: 30px;
+      font-size: 13px;
+      font-weight: 700;
+      margin-bottom: 16px;
+    }
+    h1 {
+      font-size: 26px;
+      color: #fff;
+      margin-bottom: 12px;
+      line-height: 1.3;
+    }
+    .subtitle {
+      color: var(--muted);
+      font-size: 14px;
+      margin-bottom: 24px;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 16px;
+    }
+    .banner {
+      background: rgba(54, 226, 202, 0.08);
+      border: 1px solid rgba(54, 226, 202, 0.25);
+      border-radius: 14px;
+      padding: 16px;
+      margin-bottom: 28px;
+      font-size: 14px;
+      color: #fff;
+    }
+    .warning-box {
+      background: rgba(232, 201, 106, 0.08);
+      border: 1px solid rgba(232, 201, 106, 0.3);
+      border-radius: 14px;
+      padding: 16px;
+      margin-bottom: 28px;
+      font-size: 13.5px;
+      color: var(--gold);
+      line-height: 1.6;
+    }
+    h2 {
+      font-size: 18px;
+      color: var(--primary);
+      margin: 24px 0 10px;
+    }
+    ul {
+      padding-inline-start: 22px;
+      font-size: 14px;
+      margin-bottom: 14px;
+    }
+    li {
+      margin-bottom: 8px;
+    }
+    .contact {
+      margin-top: 32px;
+      padding: 20px;
+      background: rgba(232, 201, 106, 0.08);
+      border: 1px solid rgba(232, 201, 106, 0.25);
+      border-radius: 14px;
+      font-size: 14px;
+    }
+    .contact h3 {
+      color: var(--gold);
+      font-size: 16px;
+      margin-bottom: 8px;
+    }
+    .contact a {
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .footer {
+      margin-top: 32px;
+      text-align: center;
+      font-size: 12px;
+      color: var(--muted);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="lang-bar">
+      <button class="lang-btn" onclick="selectLang('tr')">🇹🇷 Türkçe</button>
+      <button class="lang-btn" onclick="selectLang('en')">🇬🇧 English</button>
+      <button class="lang-btn" onclick="selectLang('ar')">🇸🇦 العربية</button>
+      <button class="lang-btn" onclick="selectLang('id')">🇮🇩 Bahasa Indonesia</button>
+    </div>
+
+    <div id="content-area">
+      <!-- Injected by JavaScript or SSR fallback -->
+    </div>
+  </div>
+
+  <script id="data-docs" type="application/json">
+{"tr":{"lang":"tr","dir":"ltr","title":"Bilgin — Gizlilik Politikası","badge":"🛡️ Gizlilik Bildirimi","updated":"Son güncelleme: 20 Ekim 2026 | Sürüm 1.0.0","banner":"<strong>Taahhüdümüz:</strong> Verilerinizi satmayız ve reklam amacıyla kullanmayız. Bilgin, ebeveynler için hazırlanmıştır; çocuklara yönelik değildir.","sections":[{"h":"1. Topladığımız veriler","items":["<strong>Hesap:</strong> Google ile giriş yaptığınızda e-posta adresiniz ve kullanıcı kimliğiniz Supabase Auth üzerinde saklanır.","<strong>Yapay zekâ soruları:</strong> Sohbet ekranında yazdığınız veya sesle sorduğunuz sorular ile ilgili sohbet geçmişi, yanıt üretmek için sunucumuz üzerinden Google Vertex AI (Gemini) hizmetine gönderilir. Bu içerik sunucularımızda kalıcı olarak saklanmaz; sohbet geçmişi cihazınızda tutulur.","<strong>Kullanım sayacı:</strong> Günlük soru hakkınızı uygulayabilmek için sunucuda yalnızca günlük soru sayınız tutulur.","<strong>Bildirim kimliği:</strong> Bildirim gönderebilmek için cihazınızın bildirim anahtarı (FCM) hesabınıza bağlı olarak saklanır.","<strong>Deneme hakkı koruması:</strong> Deneme süresinin tekrar kullanılmasını önlemek için Google hesap kimliğinizden ve e-postanızdan üretilen, geri döndürülemez bir özet değeri (HMAC) saklanır.","<strong>Cihazdaki veriler:</strong> Sohbet geçmişi, günlük notları, favoriler ve ilerleme bilgileri cihazınızda tutulur. Cihazın güvenli anahtar deposu kullanılabiliyorsa bu veriler şifrelenir; kullanılamıyorsa uygulama şifresiz saklamaya geçebilir.","<strong>Hata raporları:</strong> Uygulama çöktüğünde, kişisel içerik içermeyen teknik hata bilgisi Firebase Crashlytics ile toplanır."]},{"h":"2. Hizmet sağlayıcılar","items":["Google (Vertex AI, Firebase Cloud Messaging, Firebase Crashlytics, Google ile Giriş, Google Play Faturalandırma).","Supabase (hesap ve sunucu altyapısı).","RevenueCat (abonelik durumunun doğrulanması). Ödeme bilgileriniz bize ulaşmaz; ödeme Google Play tarafından işlenir."]},{"h":"3. İzinler","items":["<strong>Mikrofon:</strong> Yalnızca sesli soru sormak için, siz başlattığınızda kullanılır. Ses kaydı sunucularımıza kaydedilmez.","<strong>Bildirim:</strong> Günün yazısı ve hatırlatmaları iletmek için kullanılır; ayarlardan kapatabilirsiniz."]},{"h":"4. Çocukların verileri","items":["Bilgin ebeveynler içindir ve bilerek 13 yaş altındaki çocuklardan veri toplamaz. Yapay zekâ ile konuşurken çocuğunuzun adı, adresi gibi tanıtıcı bilgileri yazmamanızı öneririz."]},{"h":"5. Saklama ve silme (KVKK / GDPR)","items":["<strong>Profil → Hesabımı Sil</strong> ile hesabınız, günlük kullanım kayıtlarınız ve bildirim kimlikleriniz sunucudan kalıcı olarak silinir; cihazdaki yerel verileriniz de temizlenir.","Deneme hakkı korumasında kullanılan geri döndürülemez özet değeri, kötüye kullanımı önlemek için silinmez; kimliğinizi ortaya çıkarmaz.","Hesabı silmek mağaza aboneliğinizi <strong>otomatik iptal etmez</strong>. Aboneliğinizi Google Play → Abonelikler bölümünden iptal etmelisiniz.","Ayrıca e-posta ile silme, erişim veya düzeltme talebinde bulunabilirsiniz."]},{"h":"6. Güvenlik","items":["Tüm iletişim HTTPS (TLS) ile yapılır. Oturum anahtarları Android Keystore ile korunur."]}],"contactTitle":"📬 İletişim","contactText":"Gizlilikle ilgili sorularınız ve talepleriniz için:","footer":"© 2026 Bilgin"},"en":{"lang":"en","dir":"ltr","title":"Bilgin — Privacy Policy","badge":"🛡️ Privacy Notice","updated":"Last updated: October 20, 2026 | Version 1.0.0","banner":"<strong>Our commitment:</strong> We do not sell your data or use it for advertising. Bilgin is designed for parents and is not directed at children.","sections":[{"h":"1. Data we collect","items":["<strong>Account:</strong> When you sign in with Google, your email address and user ID are stored in Supabase Auth.","<strong>AI questions:</strong> The questions you type or speak, together with the related chat history, are sent through our server to Google Vertex AI (Gemini) to generate an answer. This content is not stored permanently on our servers; chat history stays on your device.","<strong>Usage counter:</strong> To apply your daily question limit, the server stores only your daily question count.","<strong>Notification ID:</strong> To send notifications, your device's notification token (FCM) is stored and linked to your account.","<strong>Trial protection:</strong> To prevent repeated use of the free trial, a one-way hash (HMAC) derived from your Google account ID and email is stored.","<strong>On-device data:</strong> Chat history, journal notes, favorites and progress are kept on your device. They are encrypted when the device's secure key storage is available; otherwise the app may fall back to unencrypted storage.","<strong>Crash reports:</strong> If the app crashes, technical error information without personal content is collected through Firebase Crashlytics."]},{"h":"2. Service providers","items":["Google (Vertex AI, Firebase Cloud Messaging, Firebase Crashlytics, Google Sign-In, Google Play Billing).","Supabase (account and server infrastructure).","RevenueCat (subscription status verification). Your payment details never reach us; payments are processed by Google Play."]},{"h":"3. Permissions","items":["<strong>Microphone:</strong> Used only for voice questions, when you start them. Audio is not saved on our servers.","<strong>Notifications:</strong> Used to deliver daily articles and reminders; you can turn them off in settings."]},{"h":"4. Children's data","items":["Bilgin is intended for parents and does not knowingly collect data from children under 13. When chatting with the AI, we recommend not entering identifying details such as your child's name or address."]},{"h":"5. Retention and deletion (GDPR / KVKK)","items":["<strong>Profile → Delete My Account</strong> permanently deletes your account, daily usage records and notification IDs from the server, and clears your local data on the device.","The one-way trial-protection hash is not deleted, to prevent abuse; it does not reveal your identity.","Deleting your account does <strong>not automatically cancel</strong> your store subscription. Cancel it in Google Play → Subscriptions.","You may also request deletion, access or correction by email."]},{"h":"6. Security","items":["All communication uses HTTPS (TLS). Session tokens are protected with the Android Keystore."]}],"contactTitle":"📬 Contact","contactText":"For privacy questions and requests:","footer":"© 2026 Bilgin"},"ar":{"lang":"ar","dir":"rtl","title":"بِلغين — سياسة الخصوصية","badge":"🛡️ إشعار الخصوصية","updated":"آخر تحديث: ٢٠ أكتوبر ٢٠٢٦ | الإصدار ١٫٠٫٠","banner":"<strong>التزامنا:</strong> لا نبيع بياناتكم ولا نستخدمها لأغراض إعلانية. تطبيق بِلغين موجّه للوالدين وليس للأطفال.","sections":[{"h":"١. البيانات التي نجمعها","items":["<strong>الحساب:</strong> عند تسجيل الدخول عبر Google يُحفظ بريدكم الإلكتروني ومعرّف المستخدم في Supabase Auth.","<strong>أسئلة الذكاء الاصطناعي:</strong> تُرسل الأسئلة التي تكتبونها أو تنطقونها مع سجل المحادثة المرتبط بها عبر خادمنا إلى خدمة Google Vertex AI (Gemini) لإنتاج الإجابة. لا يُحفظ هذا المحتوى دائماً على خوادمنا، ويبقى سجل المحادثة على جهازكم.","<strong>عدّاد الاستخدام:</strong> لتطبيق الحد اليومي للأسئلة يحفظ الخادم عدد أسئلتكم اليومية فقط.","<strong>معرّف الإشعارات:</strong> لإرسال الإشعارات يُحفظ رمز الإشعارات (FCM) الخاص بجهازكم مرتبطاً بحسابكم.","<strong>حماية الفترة التجريبية:</strong> لمنع تكرار استخدام الفترة التجريبية تُحفظ قيمة تجزئة أحادية الاتجاه (HMAC) مشتقة من معرّف حساب Google والبريد الإلكتروني.","<strong>بيانات الجهاز:</strong> يبقى سجل المحادثة وملاحظات اليوميات والمفضلات والتقدّم على جهازكم. تُشفَّر عند توفر مخزن المفاتيح الآمن في الجهاز، وإلا فقد يلجأ التطبيق إلى التخزين دون تشفير.","<strong>تقارير الأعطال:</strong> عند تعطل التطبيق تُجمع معلومات تقنية عن الخطأ دون محتوى شخصي عبر Firebase Crashlytics."]},{"h":"٢. مزودو الخدمة","items":["Google (Vertex AI وFirebase Cloud Messaging وFirebase Crashlytics وتسجيل الدخول عبر Google وفوترة Google Play).","Supabase (البنية التحتية للحساب والخادم).","RevenueCat (التحقق من حالة الاشتراك). لا تصلنا بيانات الدفع؛ تتم معالجة الدفع عبر Google Play."]},{"h":"٣. الأذونات","items":["<strong>الميكروفون:</strong> يُستخدم فقط للأسئلة الصوتية عندما تبدؤونها. لا تُحفظ التسجيلات الصوتية على خوادمنا.","<strong>الإشعارات:</strong> تُستخدم لإيصال مقال اليوم والتذكيرات، ويمكنكم إيقافها من الإعدادات."]},{"h":"٤. بيانات الأطفال","items":["بِلغين موجّه للوالدين ولا يجمع عن قصد بيانات من الأطفال دون سن ١٣ عاماً. نوصي بعدم كتابة معلومات تعريفية مثل اسم الطفل أو عنوانه عند التحدث مع الذكاء الاصطناعي."]},{"h":"٥. الاحتفاظ والحذف (GDPR / KVKK)","items":["عبر <strong>الملف الشخصي ← حذف حسابي</strong> يُحذف حسابكم وسجلات الاستخدام اليومي ومعرّفات الإشعارات من الخادم نهائياً، وتُمسح بياناتكم المحلية من الجهاز.","لا تُحذف قيمة التجزئة المستخدمة لحماية الفترة التجريبية منعاً لإساءة الاستخدام، وهي لا تكشف هويتكم.","حذف الحساب <strong>لا يلغي اشتراككم تلقائياً</strong> في المتجر. يجب إلغاؤه من Google Play ← الاشتراكات.","يمكنكم أيضاً طلب الحذف أو الاطلاع أو التصحيح عبر البريد الإلكتروني."]},{"h":"٦. الأمان","items":["تتم جميع الاتصالات عبر HTTPS (TLS). تُحمى رموز الجلسة بواسطة Android Keystore."]}],"contactTitle":"📬 التواصل","contactText":"للاستفسارات والطلبات المتعلقة بالخصوصية:","footer":"© ٢٠٢٦ بِلغين"},"id":{"lang":"id","dir":"ltr","title":"Bilgin — Kebijakan Privasi","badge":"🛡️ Pemberitahuan Privasi","updated":"Terakhir diperbarui: 20 Oktober 2026 | Versi 1.0.0","banner":"<strong>Komitmen kami:</strong> Kami tidak menjual data Anda dan tidak menggunakannya untuk iklan. Bilgin dibuat untuk orang tua dan tidak ditujukan untuk anak-anak.","sections":[{"h":"1. Data yang kami kumpulkan","items":["<strong>Akun:</strong> Saat Anda masuk dengan Google, alamat email dan ID pengguna Anda disimpan di Supabase Auth.","<strong>Pertanyaan AI:</strong> Pertanyaan yang Anda ketik atau ucapkan, beserta riwayat percakapan terkait, dikirim melalui server kami ke Google Vertex AI (Gemini) untuk menghasilkan jawaban. Konten ini tidak disimpan permanen di server kami; riwayat percakapan tetap berada di perangkat Anda.","<strong>Penghitung penggunaan:</strong> Untuk menerapkan batas pertanyaan harian, server hanya menyimpan jumlah pertanyaan harian Anda.","<strong>ID notifikasi:</strong> Untuk mengirim notifikasi, token notifikasi (FCM) perangkat Anda disimpan dan dikaitkan dengan akun Anda.","<strong>Perlindungan masa percobaan:</strong> Untuk mencegah penggunaan ulang masa percobaan, nilai hash satu arah (HMAC) yang berasal dari ID akun Google dan email Anda disimpan.","<strong>Data di perangkat:</strong> Riwayat percakapan, catatan jurnal, favorit, dan kemajuan disimpan di perangkat Anda. Data dienkripsi jika penyimpanan kunci aman perangkat tersedia; jika tidak, aplikasi dapat beralih ke penyimpanan tanpa enkripsi.","<strong>Laporan kerusakan:</strong> Jika aplikasi mengalami crash, informasi teknis kesalahan tanpa konten pribadi dikumpulkan melalui Firebase Crashlytics."]},{"h":"2. Penyedia layanan","items":["Google (Vertex AI, Firebase Cloud Messaging, Firebase Crashlytics, Masuk dengan Google, Google Play Billing).","Supabase (infrastruktur akun dan server).","RevenueCat (verifikasi status langganan). Data pembayaran Anda tidak sampai kepada kami; pembayaran diproses oleh Google Play."]},{"h":"3. Izin","items":["<strong>Mikrofon:</strong> Hanya digunakan untuk pertanyaan suara saat Anda memulainya. Rekaman suara tidak disimpan di server kami.","<strong>Notifikasi:</strong> Digunakan untuk mengirim artikel harian dan pengingat; dapat dimatikan di pengaturan."]},{"h":"4. Data anak","items":["Bilgin ditujukan untuk orang tua dan tidak dengan sengaja mengumpulkan data dari anak di bawah 13 tahun. Saat berbicara dengan AI, kami menyarankan agar tidak memasukkan detail pengenal seperti nama atau alamat anak Anda."]},{"h":"5. Penyimpanan dan penghapusan (GDPR / KVKK)","items":["<strong>Profil → Hapus Akun Saya</strong> menghapus permanen akun, catatan penggunaan harian, dan ID notifikasi Anda dari server, serta membersihkan data lokal di perangkat.","Nilai hash perlindungan masa percobaan tidak dihapus untuk mencegah penyalahgunaan; nilai ini tidak mengungkap identitas Anda.","Menghapus akun <strong>tidak otomatis membatalkan</strong> langganan toko Anda. Batalkan di Google Play → Langganan.","Anda juga dapat meminta penghapusan, akses, atau koreksi melalui email."]},{"h":"6. Keamanan","items":["Seluruh komunikasi menggunakan HTTPS (TLS). Token sesi dilindungi dengan Android Keystore."]}],"contactTitle":"📬 Kontak","contactText":"Untuk pertanyaan dan permintaan terkait privasi:","footer":"© 2026 Bilgin"}}
+  </script>
+
+  <script>
+    const allDocs = JSON.parse(document.getElementById('data-docs').textContent);
+
+    function selectLang(code) {
+      const doc = allDocs[code] || allDocs['tr'];
+      if (!doc) return;
+
+      document.documentElement.lang = doc.lang;
+      document.documentElement.dir = doc.dir || 'ltr';
+
+      // Update URL query parameter without full reload
+      if (window.history && window.history.replaceState) {
+        const url = new URL(window.location);
+        url.searchParams.set('lang', code);
+        window.history.replaceState({}, '', url);
+      }
+
+      // Update button active state
+      document.querySelectorAll('.lang-btn').forEach(btn => {
+        if (btn.getAttribute('onclick').includes("'" + code + "'")) {
+          btn.classList.add('active');
+        } else {
+          btn.classList.remove('active');
+        }
+      });
+
+      // Render content
+      let sectionsHtml = '';
+      if (doc.sections) {
+        sectionsHtml = doc.sections.map(s => {
+          const items = s.items.map(i => '<li>' + i + '</li>').join('');
+          return '<h2>' + s.h + '</h2><ul>' + items + '</ul>';
+        }).join('');
+      }
+
+      let warningHtml = '';
+      if (doc.warning) {
+        warningHtml = '<div class="warning-box">' + doc.warning + '</div>';
+      }
+
+      const html = 
+        '<div class="badge">' + doc.badge + '</div>' +
+        '<h1>' + doc.title + '</h1>' +
+        '<div class="subtitle">' + doc.updated + '</div>' +
+        '<div class="banner">' + doc.banner + '</div>' +
+        warningHtml +
+        sectionsHtml +
+        '<div class="contact">' +
+          '<h3>' + (doc.contactTitle || '📬 İletişim') + '</h3>' +
+          '<p>' + (doc.contactText || '') + '</p>' +
+          '<p><a href="mailto:hendese3dmodelleme@gmail.com">hendese3dmodelleme@gmail.com</a></p>' +
+        '</div>' +
+        '<div class="footer">' + (doc.footer || '') + '</div>';
+
+      document.getElementById('content-area').innerHTML = html;
+    }
+
+    // Determine initial language from ?lang= or navigator.language
+    const urlParams = new URLSearchParams(window.location.search);
+    let initialLang = (urlParams.get('lang') || '').toLowerCase().slice(0, 2);
+    if (!allDocs[initialLang]) {
+      const navLang = (navigator.language || 'tr').toLowerCase().slice(0, 2);
+      initialLang = allDocs[navLang] ? navLang : 'tr';
+    }
+
+    selectLang(initialLang);
+  </script>
+</body>
+</html>
